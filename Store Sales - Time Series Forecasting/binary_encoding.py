@@ -1,8 +1,6 @@
 import numpy as np
-
-
 class EncodeBinary:
-    def dec_to_bin(self, num):
+    def dec_to_bin(num):
         n = num
         st = []
         ctr = 0
@@ -12,27 +10,16 @@ class EncodeBinary:
             st.append(r)
         fin = st[::-1]
         return fin
-
-    def unify_binary_length(self, arr):
-        length = []
-        for i in arr:
-            length.append(len(i))
-        max_len = max(length)
-        fin = []
-        for i in arr:
-            if len(i) != max_len:
-                z = np.zeros(max_len-len(i))
-                z = z.astype("int")
-                t = list(z)
-                fin.append((t+i))
-            else:
-                fin.append(i)
-        return fin
-
-    def column_names(self, nam, col_num):
-        li = []
-        for i in range(0, col_num):
-            h = nam+"_"+str(i)
-            li.append(h)
-        return li
-#%%
+    def max_len_bin(x,lt):
+        ctr = len(x)
+        u = np.zeros(lt-ctr)
+        v = u.astype("int")
+        t = list(v)
+        f = t + x
+        return f
+    def column_names(nam,col_num):
+        lis = []
+        for i in range(0,col_num):
+            t = nam+"_"+str(i)
+            lis.append(t)
+        return lis
