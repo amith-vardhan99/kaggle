@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 class EncodeBinary:
     def dec_to_bin(self,num):
         n = num
@@ -24,15 +23,4 @@ class EncodeBinary:
             t = nam+"_"+str(i)
             lis.append(t)
         return lis
-
-    def binary_enc(self,df):
-        bin_convert = lambda x: dec_to_bin(x)
-        bin_list = list(map(bin_convert,df))
-        len_of_each_ele = lambda x: len(x)
-        max_len = max(list(map(len_of_each_ele,bin_list)))
-        optimi_bin = lambda x: max_len_bin(df,max_len)
-        bin_stabi = list(map(optimi_bin,bin_list))
-        cols = column_names(df.name,max_len)
-        df_num = pd.DataFrame(bin_stabi,columns=cols)
-        return df_num
 #%%
