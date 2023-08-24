@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 class EncodeBinary:
     def dec_to_bin(self,num):
         n = num
