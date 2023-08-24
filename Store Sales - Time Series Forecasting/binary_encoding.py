@@ -12,10 +12,13 @@ class EncodeBinary:
         return fin
     def max_len_bin(self,x,lt):
         ctr = len(x)
-        u = np.zeros(lt-ctr)
-        v = u.astype("int")
-        t = list(v)
-        f = t + x
+        if ctr < lt:
+            u = np.zeros(lt-ctr)
+            v = u.astype("int")
+            t = list(v)
+            f = t + x
+        else:
+            f = x
         return f
     def column_names(self,nam,col_num):
         lis = []
