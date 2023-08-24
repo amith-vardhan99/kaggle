@@ -2,7 +2,7 @@ import numpy as np
 
 
 class EncodeBinary:
-    def bin_to_dec(self, num):
+    def dec_to_bin(self, num):
         n = num
         st = []
         ctr = 0
