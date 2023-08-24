@@ -1,6 +1,6 @@
 import numpy as np
 class EncodeBinary:
-    def dec_to_bin(num):
+    def dec_to_bin(self,num):
         n = num
         st = []
         ctr = 0
@@ -10,14 +10,14 @@ class EncodeBinary:
             st.append(r)
         fin = st[::-1]
         return fin
-    def max_len_bin(x,lt):
+    def max_len_bin(self,x,lt):
         ctr = len(x)
         u = np.zeros(lt-ctr)
         v = u.astype("int")
         t = list(v)
         f = t + x
         return f
-    def column_names(nam,col_num):
+    def column_names(self,nam,col_num):
         lis = []
         for i in range(0,col_num):
             t = nam+"_"+str(i)
