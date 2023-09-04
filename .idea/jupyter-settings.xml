@@ -6,7 +6,7 @@
         <entry key="$PROJECT_DIR$/.idea/kaggle.iml">
           <value>
             <JupyterConnectionParameters>
-              <option name="argv" value="jupyter notebook --ServerApp.iopub_data_rate_limit=10e12" />
+              <option name="argv" value="notebook --ServerApp.iopub_data_rate_limit=10e12" />
               <option name="managed" value="true" />
               <option name="sdkName" value="" />
             </JupyterConnectionParameters>
